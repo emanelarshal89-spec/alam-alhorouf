@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عالم الحروف</title>
+<style>
+body{font-family:Arial;text-align:center;background:#fff3d6;margin:0;padding:20px}
+h1{color:#ff7043}
+.card{background:white;border-radius:20px;padding:20px;margin:15px auto;max-width:400px}
+button{background:#4caf50;color:white;border:0;padding:15px 25px;border-radius:12px;font-size:22px;margin:8px}
+.letter{font-size:55px;color:#673ab7}
+</style>
+</head>
+<body>
+<h1>🌈 عالم الحروف 🌈</h1>
+<div class="card">
+<h2>هيا نتعلم الحروف العربية</h2>
+<div class="letter" id="letter">أ</div>
+<div id="word">أسد 🦁</div>
+<button onclick="next()">الحرف التالي ⭐</button>
+</div>
+<script>
+let letters=[
+["أ","أسد 🦁"],["ب","بطة 🦆"],["ت","تفاحة 🍎"],
+["ث","ثعلب 🦊"],["ج","جمل 🐪"],["ح","حصان 🐴"],
+["خ","خروف 🐑"],["د","دب 🐻"],["ر","رمان 🍎"],
+["س","سمكة 🐟"],["ش","شمس ☀️"],["م","موز 🍌"]
+];
+let i=0;
+function next(){
+i=(i+1)%letters.length;
+document.getElementById("letter").textContent=letters[i][0];
+document.getElementById("word").textContent=letters[i][1];
+}
+</script>
+</body>
+</html>
